@@ -1,0 +1,1 @@
+java -Xmx3072M -Xms1024M -jar minecraft_server.1.8.9.jar nogui purse
