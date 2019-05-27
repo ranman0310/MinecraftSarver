@@ -1,0 +1,335 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 19/05/26 22:25
+Description: Watching Server
+
+java.lang.Error
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:455)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.lang.Thread.sleep(Native Method)
+
+-- Thread Dump --
+Details:
+	Threads: "Thread-6" Id=49 RUNNABLE
+	at java.io.FileOutputStream.close0(Native Method)
+	at java.io.FileOutputStream.access$000(Unknown Source)
+	at java.io.FileOutputStream$1.close(Unknown Source)
+	at java.io.FileDescriptor.closeAll(Unknown Source)
+	-  locked java.io.FileDescriptor@2aead71b
+	at java.io.FileOutputStream.close(Unknown Source)
+	at java.util.zip.DeflaterOutputStream.close(Unknown Source)
+	at java.io.FilterOutputStream.close(Unknown Source)
+	at org.apache.logging.log4j.core.appender.rolling.helper.GZCompressAction.execute(GZCompressAction.java:105)
+	...
+
+
+"Netty Server IO #15" Id=35 RUNNABLE
+	at sun.nio.cs.UTF_16BE.newDecoder(Unknown Source)
+	at java.lang.StringCoding.decode(Unknown Source)
+	at java.lang.String.<init>(Unknown Source)
+	at java.lang.String.<init>(Unknown Source)
+	at lj.channelRead(SourceFile:65)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.timeout.ReadTimeoutHandler.channelRead(ReadTimeoutHandler.java:150)
+	...
+
+
+"Netty Server IO #14" Id=34 RUNNABLE
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	-  locked java.lang.Object@2012bc6b
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:270)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:707)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.flush0(AbstractNioChannel.java:315)
+	...
+
+
+"Netty Server IO #13" Id=33 RUNNABLE
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:686)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:704)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:642)
+	at com.google.gson.internal.Streams.write(Streams.java:68)
+	at com.google.gson.TreeTypeAdapter.write(TreeTypeAdapter.java:71)
+	at com.google.gson.Gson.toJson(Gson.java:593)
+	at com.google.gson.Gson.toJsonTree(Gson.java:486)
+	at com.google.gson.Gson.toJsonTree(Gson.java:465)
+	...
+
+
+"Netty Server IO #12" Id=32 RUNNABLE
+	at sun.nio.cs.UTF_16BE.newDecoder(Unknown Source)
+	at java.lang.StringCoding.decode(Unknown Source)
+	at java.lang.String.<init>(Unknown Source)
+	at java.lang.String.<init>(Unknown Source)
+	at lj.channelRead(SourceFile:65)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.timeout.ReadTimeoutHandler.channelRead(ReadTimeoutHandler.java:150)
+	...
+
+
+"Netty Server IO #11" Id=31 RUNNABLE
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	-  locked java.lang.Object@6510260d
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:270)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:707)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.flush0(AbstractNioChannel.java:315)
+	...
+
+
+"Netty Server IO #10" Id=30 RUNNABLE
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:686)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:704)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:642)
+	at com.google.gson.internal.Streams.write(Streams.java:68)
+	at com.google.gson.TreeTypeAdapter.write(TreeTypeAdapter.java:71)
+	at com.google.gson.Gson.toJson(Gson.java:593)
+	at com.google.gson.Gson.toJsonTree(Gson.java:486)
+	at com.google.gson.Gson.toJsonTree(Gson.java:465)
+	...
+
+
+"Netty Server IO #9" Id=29 RUNNABLE
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	-  locked java.lang.Object@193e67bb
+	at io.netty.buffer.UnpooledUnsafeDirectByteBuf.setBytes(UnpooledUnsafeDirectByteBuf.java:446)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:881)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:225)
+	...
+
+
+"Netty Server IO #8" Id=28 RUNNABLE
+	at sun.nio.cs.UTF_16BE.newDecoder(Unknown Source)
+	at java.lang.StringCoding.decode(Unknown Source)
+	at java.lang.String.<init>(Unknown Source)
+	at java.lang.String.<init>(Unknown Source)
+	at lj.channelRead(SourceFile:65)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.timeout.ReadTimeoutHandler.channelRead(ReadTimeoutHandler.java:150)
+	...
+
+
+"Netty Server IO #7" Id=27 RUNNABLE
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	-  locked java.lang.Object@54bfa436
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:270)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:707)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.flush0(AbstractNioChannel.java:315)
+	...
+
+
+"Netty Server IO #6" Id=26 RUNNABLE
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:681)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:704)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:642)
+	at com.google.gson.internal.Streams.write(Streams.java:68)
+	at com.google.gson.TreeTypeAdapter.write(TreeTypeAdapter.java:71)
+	at com.google.gson.Gson.toJson(Gson.java:593)
+	at com.google.gson.Gson.toJsonTree(Gson.java:486)
+	at com.google.gson.Gson.toJsonTree(Gson.java:465)
+	...
+
+
+"Netty Server IO #5" Id=25 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@617bbb2e
+	-  locked java.util.Collections$UnmodifiableSet@53fd942
+	-  locked sun.nio.ch.WindowsSelectorImpl@6f5665e1
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	...
+
+
+"Netty Server IO #4" Id=24 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@4661e229
+	-  locked java.util.Collections$UnmodifiableSet@7a7f9300
+	-  locked sun.nio.ch.WindowsSelectorImpl@171a0c4
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	...
+
+
+"Netty Server IO #3" Id=23 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@5dd4a466
+	-  locked java.util.Collections$UnmodifiableSet@146d755f
+	-  locked sun.nio.ch.WindowsSelectorImpl@120c1341
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	...
+
+
+"Netty Server IO #2" Id=22 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@1e77e644
+	-  locked java.util.Collections$UnmodifiableSet@66788678
+	-  locked sun.nio.ch.WindowsSelectorImpl@1940d065
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	...
+
+
+"Netty Server IO #1" Id=21 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@6ba45e17
+	-  locked java.util.Collections$UnmodifiableSet@4a40d0e1
+	-  locked sun.nio.ch.WindowsSelectorImpl@6829c497
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	...
+
+
+"File IO Thread" Id=38 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at auc.c(SourceFile:51)
+	at auc.run(SourceFile:30)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Server Watchdog" Id=37 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at kp.run(SourceFile:43)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #0" Id=20 RUNNABLE
+	at sun.nio.ch.IOUtil.configureBlocking(Native Method)
+	at sun.nio.ch.SocketChannelImpl.implConfigureBlocking(Unknown Source)
+	at java.nio.channels.spi.AbstractSelectableChannel.configureBlocking(Unknown Source)
+	-  locked java.lang.Object@77f5e20f
+	at io.netty.channel.nio.AbstractNioChannel.<init>(AbstractNioChannel.java:79)
+	at io.netty.channel.nio.AbstractNioByteChannel.<init>(AbstractNioByteChannel.java:52)
+	at io.netty.channel.socket.nio.NioSocketChannel.<init>(NioSocketChannel.java:94)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doReadMessages(NioServerSocketChannel.java:139)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:68)
+	...
+
+
+"Server console handler" Id=18 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	-  locked java.io.BufferedInputStream@3ee84e00
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	-  locked java.io.InputStreamReader@72e346e4
+	at java.io.InputStreamReader.read(Unknown Source)
+	...
+
+
+"DestroyJavaVM" Id=17 RUNNABLE
+
+
+"Server thread" Id=15 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:455)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Server Infinisleeper" Id=14 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at ko$1.run(SourceFile:65)
+
+
+"Snooper Timer" Id=13 TIMED_WAITING on java.util.TaskQueue@54483953
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@54483953
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+
+"Attach Listener" Id=5 RUNNABLE
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@cf55c4f
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@cf55c4f
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@70919b9f
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@70919b9f
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference.tryHandlePending(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+
+
+Stacktrace:
+	at kp.run(SourceFile:59)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_191, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 514422088 bytes (490 MB) / 1065877504 bytes (1016 MB) up to 2863661056 bytes (2731 MB)
+	JVM Flags: 2 total; -Xmx3072M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 20; []
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

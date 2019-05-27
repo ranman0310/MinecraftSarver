@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "uuid": "20c67728-07a5-459a-b0b5-b3f3c138a8f4",
+    "name": "ikok2017",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "dfcfd664-2512-4b0a-a250-392af3ac4ed0",
+    "name": "Umiya_yuki",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]

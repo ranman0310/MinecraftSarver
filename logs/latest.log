@@ -1,23 +1,28 @@
-[00:10:20] [Server thread/INFO]: Umiya_yuki has just earned the achievement [Hot Topic]
-[00:13:51] [Server thread/INFO]: Umiya_yuki has just earned the achievement [Acquire Hardware]
-[00:46:48] [Server thread/INFO]: Set ikok2017's game mode to Spectator Mode
-[00:47:42] [Server thread/INFO]: Set ikok2017's game mode to Survival Mode
-[00:54:13] [Server thread/INFO]: ikok2017 fell from a high place
-[00:59:55] [Server thread/INFO]: kakocchi fell from a high place
-[01:00:54] [Server thread/INFO]: ikok2017 lost connection: TextComponent{text='Disconnected', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null, insertion=null}}
-[01:00:54] [Server thread/INFO]: ikok2017 left the game
-[01:04:56] [Server thread/INFO]: Umiya_yuki lost connection: TextComponent{text='Disconnected', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null, insertion=null}}
-[01:04:56] [Server thread/INFO]: Umiya_yuki left the game
-[01:06:24] [Server thread/INFO]: kakocchi lost connection: TextComponent{text='Disconnected', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null, insertion=null}}
-[01:06:24] [Server thread/INFO]: kakocchi left the game
-[01:09:03] [Server thread/INFO]: Stopping the server
-[01:09:03] [Server thread/INFO]: Stopping server
-[01:09:04] [Server thread/INFO]: Saving players
-[01:09:04] [Server thread/INFO]: Saving worlds
-[01:09:04] [Server thread/INFO]: Saving chunks for level 'world'/Overworld
-[01:09:04] [Server thread/INFO]: Saving chunks for level 'world'/Nether
-[01:09:04] [Server thread/INFO]: Saving chunks for level 'world'/The End
-[01:09:04] [Server Shutdown Thread/INFO]: Stopping server
-[01:09:04] [Server Shutdown Thread/INFO]: Saving players
-[01:09:04] [Server Shutdown Thread/INFO]: Saving worlds
-[01:09:04] [Server Shutdown Thread/INFO]: Saving chunks for level 'world'/Overworld
+[23:07:26] [Server thread/INFO]: Starting minecraft server version 1.8.9
+[23:07:26] [Server console handler/ERROR]: Exception handling console input
+java.io.IOException: ÉnÉìÉhÉãÇ™ñ≥å¯Ç≈Ç∑ÅB
+	at java.io.FileInputStream.readBytes(Native Method) ~[?:1.8.0_191]
+	at java.io.FileInputStream.read(Unknown Source) ~[?:1.8.0_191]
+	at java.io.BufferedInputStream.read1(Unknown Source) ~[?:1.8.0_191]
+	at java.io.BufferedInputStream.read(Unknown Source) ~[?:1.8.0_191]
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source) ~[?:1.8.0_191]
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source) ~[?:1.8.0_191]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[?:1.8.0_191]
+	at java.io.InputStreamReader.read(Unknown Source) ~[?:1.8.0_191]
+	at java.io.BufferedReader.fill(Unknown Source) ~[?:1.8.0_191]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_191]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_191]
+	at ko$2.run(SourceFile:81) [minecraft_server.1.8.9.jar:?]
+[23:07:26] [Server thread/INFO]: Loading properties
+[23:07:26] [Server thread/INFO]: Default game type: SURVIVAL
+[23:07:26] [Server thread/INFO]: Generating keypair
+[23:07:26] [Server thread/INFO]: Starting Minecraft server on *:25565
+[23:07:26] [Server thread/INFO]: Using default channel type
+[23:07:26] [Server thread/INFO]: Preparing level "world"
+[23:07:26] [Server thread/INFO]: Preparing start region for level 0
+[23:07:27] [Server thread/INFO]: Done (1.024s)! For help, type "help" or "?"
+[23:07:28] [Server thread/INFO]: Stopping server
+[23:07:28] [Server thread/INFO]: Saving players
+[23:07:28] [Server thread/INFO]: Saving worlds
+[23:07:28] [Server thread/INFO]: Saving chunks for level 'world'/Overworld
+[23:07:28] [Server Shutdown Thread/INFO]: Stopping server
